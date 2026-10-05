@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerBuddy | AI Career Assistant</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #1f2937;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+            opacity: 0.95;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 35px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            color: #4f46e5;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #4f46e5;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #4f46e5;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4338ca;
+        }
+
+        #message {
+            line-height: 1.7;
+        }
+
+        .result-box {
+            background: #f8fafc;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 12px;
+            border-left: 5px solid #4f46e5;
+        }
+
+        .result-box h3 {
+            margin-bottom: 8px;
+            color: #4f46e5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #6b7280;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎓 CareerBuddy</h1>
+        <p>Your AI-Powered Student Career Assistant</p>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>🚀 Discover Your Career Path</h2>
+
+            <form id="studentForm">
+
+                <label for="name">👤 Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="skills">💻 Your Skills</label>
+                <input
+                    type="text"
+                    id="skills"
+                    placeholder="Example: Java, SQL, HTML"
+                    required
+                >
+
+                <label for="interests">🎯 Your Interests</label>
+                <input
+                    type="text"
+                    id="interests"
+                    placeholder="Example: Web Development, AI"
+                    required
+                >
+
+                <button type="submit">
+                    Find My Career 🚀
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="card">
+
+            <h2>✨ Your Career Plan</h2>
+
+            <div id="message">
+                <p>Enter your details above to discover your career path.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>CareerBuddy © 2026 | Built for CodeHack India 🚀</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
